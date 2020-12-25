@@ -2,7 +2,13 @@ import React, { useState, useEffect, useRef } from "react"
 import styles from "../styles/components/_recipeSection.module.scss"
 import { Link } from "gatsby"
 
-export default function RecipeSection({ backgroundImage, name, color, id }) {
+export default function RecipeSection({
+  backgroundImage,
+  name,
+  color,
+  id,
+  filter,
+}) {
   const [position, setPosition] = useState(0)
   const [showHeader, setShowHeader] = useState(false)
   const sectionEl = useRef()
@@ -52,7 +58,7 @@ export default function RecipeSection({ backgroundImage, name, color, id }) {
         backgroundPositionY: `${position}px`,
       }}
     >
-      <Link to="/recipes" state={{ fromFeed: true }}>
+      <Link to="/recipes" state={{ filter }}>
         <div>
           <h2
             className={`${styles.sectionName} ${
