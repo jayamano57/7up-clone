@@ -92,9 +92,6 @@ export default function Recipes({ location, data }) {
     const filter = [type, occasion, ingredient].filter(
       item => !item.includes("Any")
     )
-    // if (randomRecipeType !== 'Food') {
-    //     filter.push(randomRecipeIngredient);
-    // }
     shuffle.filter(filter)
     setType(type)
     setOccasion(occasion)

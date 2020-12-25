@@ -2,13 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import styles from "../styles/components/_recipeSection.module.scss"
 import { Link } from "gatsby"
 
-export default function RecipeSection({
-  backgroundImage,
-  name,
-  color,
-  id,
-  filter,
-}) {
+export default function RecipeSection({ backgroundImage, name, color, id }) {
   const [position, setPosition] = useState(0)
   const [showHeader, setShowHeader] = useState(false)
   const sectionEl = useRef()
@@ -19,8 +13,9 @@ export default function RecipeSection({
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
+
+  // handles parallax effect
   function handleScroll() {
-    console.log("hit")
     const navHeight = 54
     if (!sectionEl.current) return false
     const {
@@ -34,7 +29,6 @@ export default function RecipeSection({
       const offset = (viewPortHeight - sectionTop) / 2
       setPosition(inner - offset)
     }
-    //   console.log(Math.round(headerBottom), viewPortHeight)
     if (
       Math.round(headerBottom) <= viewPortHeight &&
       headerBottom > navHeight

@@ -77,7 +77,7 @@ export default function HomeRecipe({
           }`}
         >
           <Link to="/#products">
-            <img src={image} alt={header} />
+            <img src={windowWidth <= 768 ? imageM : image} alt={header} />
             <h2>{header}</h2>
             {subHeader && <p className={styles.subHeader}>{subHeader}</p>}
             {btnText && (

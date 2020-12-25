@@ -1,17 +1,3 @@
-put data from home page in object or from backend
-optimize static images
-404
+put data from home page in object
 
-optimize
-- put filter into a grouped state. so instead of setFood, setOccasion, setIngredient... do setFilter
-- globalize css class styles
-- 21+ page
-
-bugs
-- no results style
-- enter directions for empty fields
-- on hover nav buttons
-- replace 7up home native link with Link
-- scrolling animation on home page
-- scroll on cover pictures on home
-- scrolling issue whne navigating from and to recipes page
+-links from home not filtering

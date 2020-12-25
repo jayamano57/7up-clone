@@ -15,9 +15,9 @@ export default function AgeGate({ changeHandler, enterRecipe }) {
           maxLength="4"
           placeholder="YYYY"
           onChange={changeHandler}
-          required
+          required="required"
         />
-        <button type="button" onClick={enterRecipe}>
+        <button type="submit" onClick={enterRecipe}>
           ENTER RECIPES
         </button>
         <p className={styles.warningBlurb}>

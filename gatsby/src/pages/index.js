@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/layout"
 import styles from "../styles/pages/_home.module.scss"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
@@ -45,6 +44,7 @@ export default class HomePage extends React.Component {
     this.previous = this.previous.bind(this)
     this.reinit = this.reinit.bind(this)
   }
+
   next(e) {
     e.preventDefault()
     e.stopPropagation()
@@ -74,7 +74,6 @@ export default class HomePage extends React.Component {
                 reinit={this.reinit}
                 prev={this.previous}
                 next={this.next}
-                // videoURL="https://www.youtube.com/embed/9xJqhhqdIyM?enablejsapi=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=0&amp;iv_load_policy=3&amp;autoplay=1&amp;origin=https%3A%2F%2Fwww.7up.com&amp;widgetid=2"
                 videoURL="https://www.youtube.com/embed/9xJqhhqdIyM?autoplay=1"
                 key="1"
               />

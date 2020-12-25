@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styles from "../styles/components/_productInfo.module.scss"
 import SlideButton from "./SlideButton"
 import Img from "gatsby-image"
 import walmart from "../media/walmartgrocery_usa.svg"
 import amazon from "../media/amazonfresh_usa.svg"
 export default function ProductInfo({ featuredProduct }) {
-  console.log(featuredProduct)
   function calculateRating() {
     const { one, two, three, four, five } = featuredProduct.rating
     const total = one + two + three + four + five
@@ -36,10 +35,6 @@ export default function ProductInfo({ featuredProduct }) {
           style={{ width: "80px", height: "127px" }}
           imgStyle={{ objectFit: "contain" }}
         />
-        {/* <img
-          src={featuredProduct.image.asset.fluid.srcWebp}
-          style={{ height: "127px" }}
-        /> */}
         <div className={styles.productInfoHeaderContainer}>
           <h2 className={styles.productInfoHeaderName}>
             {featuredProduct.name}

@@ -14,6 +14,7 @@ export default function Recipe({ data: { recipe }, pageContext }) {
   const [over21, setOver21] = useState(sessionStorage.getItem("over21"))
   const [form, changeHandler] = useForm({ age: "" })
   function enterRecipe(e) {
+    e.preventDefault()
     const val = parseInt(form.age)
     const date = new Date()
     const year = date.getFullYear()
