@@ -17,14 +17,14 @@ export default function HomeRecipe({
   subHeader,
   videoURL,
 }) {
-  const initalWindowWidth = typeof window !== "undefined" && window.innerWidth
   const [play, setPlay] = useState(false)
   const [showVideo, setShowVideo] = useState(false)
   const [hideLeftContainer, setLeftContainer] = useState(false)
   const [hideRightContainer, setRightContainer] = useState(false)
-  const [windowWidth, setWindowWidth] = useState(initalWindowWidth)
+  const [windowWidth, setWindowWidth] = useState(null)
 
   useEffect(() => {
+    setWindowWidth(typeof window !== "undefined" && window.innerWidth)
     typeof window !== "undefined" &&
       window.addEventListener("resize", () =>
         setWindowWidth(window !== "undefined" && window.innerWidth)
