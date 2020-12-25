@@ -10,9 +10,10 @@ export default function Nav() {
     setScrolled(window !== "undefined" && window.scrollY !== 0)
   }
   useEffect(() => {
-    window !== "undefined" && window.addEventListener("scroll", handleScroll)
+    typeof window !== "undefined" &&
+      window.addEventListener("scroll", handleScroll)
     return () => {
-      window !== "undefined" &&
+      typeof window !== "undefined" &&
         window.removeEventListener("scroll", handleScroll)
     }
   }, [])

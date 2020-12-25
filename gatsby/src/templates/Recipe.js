@@ -12,9 +12,7 @@ import { graphql } from "gatsby"
 
 export default function Recipe({ data: { recipe }, pageContext }) {
   const [over21, setOver21] = useState(
-    typeof window !== "undefined" &&
-      window !== "undefined" &&
-      window.sessionStorage.getItem("over21")
+    typeof window !== "undefined" && window.sessionStorage.getItem("over21")
   )
   const [form, changeHandler] = useForm({ age: "" })
   function enterRecipe(e) {
@@ -26,7 +24,6 @@ export default function Recipe({ data: { recipe }, pageContext }) {
     if (over21) {
       // need this check for when gatsby builds, window is browser only feature
       typeof window !== "undefined" &&
-        window !== "undefined" &&
         window.sessionStorage.setItem("over21", true)
       setOver21(true)
     } else {

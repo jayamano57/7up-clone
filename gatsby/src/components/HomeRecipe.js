@@ -22,16 +22,16 @@ export default function HomeRecipe({
   const [hideLeftContainer, setLeftContainer] = useState(false)
   const [hideRightContainer, setRightContainer] = useState(false)
   const [windowWidth, setWindowWidth] = useState(
-    window !== "undefined" && window.innerWidth
+    typeof window !== "undefined" && window.innerWidth
   )
 
   useEffect(() => {
-    window !== "undefined" &&
+    typeof window !== "undefined" &&
       window.addEventListener("resize", () =>
         setWindowWidth(window !== "undefined" && window.innerWidth)
       )
     return (
-      window !== "undefined" &&
+      typeof window !== "undefined" &&
       window.removeEventListener("resize", () =>
         setWindowWidth(window !== "undefined" && window.innerWidth)
       )
