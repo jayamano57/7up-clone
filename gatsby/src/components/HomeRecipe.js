@@ -21,12 +21,20 @@ export default function HomeRecipe({
   const [showVideo, setShowVideo] = useState(false)
   const [hideLeftContainer, setLeftContainer] = useState(false)
   const [hideRightContainer, setRightContainer] = useState(false)
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(
+    window !== "undefined" && window.innerWidth
+  )
 
   useEffect(() => {
-    window.addEventListener("resize", () => setWindowWidth(window.innerWidth))
-    return window.removeEventListener("resize", () =>
-      setWindowWidth(window.innerWidth)
+    window !== "undefined" &&
+      window.addEventListener("resize", () =>
+        setWindowWidth(window !== "undefined" && window.innerWidth)
+      )
+    return (
+      window !== "undefined" &&
+      window.removeEventListener("resize", () =>
+        setWindowWidth(window !== "undefined" && window.innerWidth)
+      )
     )
   }, [])
   const playVideo = () => {
@@ -83,7 +91,9 @@ export default function HomeRecipe({
             {btnText && (
               <SlideButton
                 onClick={() => {
-                  const productSection = document.getElementById("products")
+                  const productSection =
+                    document !== "undefined" &&
+                    document.getElementById("products")
                   productSection.scrollIntoView()
                 }}
                 text={btnText}

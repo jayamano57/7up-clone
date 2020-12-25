@@ -7,12 +7,13 @@ import { Link } from "gatsby"
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   function handleScroll(e) {
-    setScrolled(window.scrollY !== 0)
+    setScrolled(window !== "undefined" && window.scrollY !== 0)
   }
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
+    window !== "undefined" && window.addEventListener("scroll", handleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      window !== "undefined" &&
+        window.removeEventListener("scroll", handleScroll)
     }
   }, [])
   return (

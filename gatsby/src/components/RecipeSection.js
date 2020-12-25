@@ -8,9 +8,10 @@ export default function RecipeSection({ backgroundImage, name, color, id }) {
   const sectionEl = useRef()
   const headerEl = useRef()
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
+    window !== "undefined" && window.addEventListener("scroll", handleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      window !== "undefined" &&
+        window.removeEventListener("scroll", handleScroll)
     }
   }, [])
 
@@ -23,7 +24,7 @@ export default function RecipeSection({ backgroundImage, name, color, id }) {
       bottom: sectionBottom,
     } = sectionEl.current.getBoundingClientRect()
     const { bottom: headerBottom } = headerEl.current.getBoundingClientRect()
-    const viewPortHeight = window.innerHeight
+    const viewPortHeight = window !== "undefined" && window.innerHeight
     if (sectionTop < viewPortHeight && sectionBottom > navHeight) {
       const inner = viewPortHeight / 2
       const offset = (viewPortHeight - sectionTop) / 2
