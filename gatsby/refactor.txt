@@ -1,3 +1,0 @@
-put data from home page in object
-
--links from home not filtering
