@@ -1,0 +1,165 @@
+@import "../mixins";
+
+.productInfoHeader {
+  display: flex;
+  width: 50.3rem;
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+  .productInfoHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5rem;
+    margin-top: -1rem;
+    .productInfoHeaderName {
+      @include header(#858585, 6.9rem);
+      margin-bottom: 1rem;
+    }
+    .productInfoRatings {
+      width: max-content;
+      font-size: 1.6rem;
+      margin-left: 0.5rem;
+      color: #cdc9c9;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    .productInfoRatings {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .starContainer {
+        position: relative;
+        margin-right: 8px;
+        & > * {
+          font-size: 1.6rem;
+        }
+        .stars {
+          color: #cdc9c9;
+        }
+        .backgroundStars {
+          left: 0;
+          position: absolute;
+          overflow: hidden;
+          color: #ffd101;
+        }
+      }
+      .productInfoRatingStats {
+        & > * {
+          font-size: 1.3rem;
+          color: #818182;
+        }
+        & :first-child {
+          margin-right: 0.8rem;
+        }
+      }
+    }
+  }
+}
+.productInfoSubHeader {
+  width: 50.3rem;
+  margin-top: 2.5rem;
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+  h3 {
+    @include header(#818182, 2.4rem);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+  p {
+    @include header(#818182, 1.6rem);
+    text-transform: initial;
+    font-weight: 400;
+  }
+}
+.productRetailerInfo {
+  border: 3px solid #b2b2b2;
+  max-width: 34.6rem;
+  margin: 3rem 0 0.5rem;
+  padding: 1.6rem 1rem;
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    select {
+      padding: 0 0 0 1.5rem;
+      height: 3.4rem;
+      min-width: 15rem;
+      width: 100%;
+      font-size: 1.4rem;
+      line-height: 1.25;
+      color: #55595c;
+      background-color: var(--white);
+      background-image: none;
+      background-clip: padding-box;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 0.5rem;
+    }
+    .retailerOptions {
+      width: 90%;
+      margin: 2.4rem 0;
+      display: flex;
+      justify-content: space-around;
+      a {
+        img {
+          width: 5rem;
+          height: 5rem;
+        }
+      }
+    }
+    .callToAction {
+      @include header(#818182, 1.4rem);
+      text-transform: initial;
+      font-weight: 400;
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+.productNutritionInfo {
+  margin: 3rem 0 0.5rem;
+  & > * {
+    color: #818182;
+  }
+  .nutritionFacts {
+    display: flex;
+    .nutritionLeft {
+      margin-right: 3.2rem;
+      h4 {
+        font-size: 1.7rem;
+        font-weight: 700;
+      }
+      p {
+        font-weight: 700;
+        font-size: 3.4rem;
+        &:nth-of-type(1) {
+          margin-bottom: 0.75em;
+        }
+      }
+    }
+    .nutritionRight {
+      thead {
+        tr {
+          th {
+            font-size: 1.7rem;
+            &:first-child {
+              padding-right: 1em;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            font-size: 1.4rem;
+            font-weight: 700;
+            padding: 3px 0;
+            &:first-child {
+              padding-right: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

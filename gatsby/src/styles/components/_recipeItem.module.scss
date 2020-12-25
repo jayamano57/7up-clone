@@ -1,0 +1,87 @@
+.recipeItem {
+  margin: auto;
+  width: 320px;
+  height: 320px;
+  margin: 0 7px 14px;
+  text-align: center;
+  background-color: aquamarine;
+  @media (max-width: 991px) {
+    margin-bottom: 4rem;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: #000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s linear;
+  }
+  .recipeLinkBox {
+    padding: 5px 10px;
+    color: #fff;
+    letter-spacing: 1.8px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s linear;
+  }
+  .recipeName {
+    font-size: 30px;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+  .recipeViewRecipe {
+    bottom: 25%;
+    font-size: 16px;
+  }
+  .recipeNameBox {
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    font-weight: 700;
+    bottom: -8%;
+    height: 50px;
+    width: 80%;
+    letter-spacing: 1px;
+    font-size: 15px;
+    @media (max-width: 991px) {
+      display: flex;
+    }
+    span {
+      background-color: #009e5f;
+      max-width: none;
+      display: block;
+      padding: 5px 10px;
+      max-width: 100%;
+      color: #fff;
+    }
+  }
+  @media (min-width: 991px) {
+    &:hover {
+      cursor: pointer;
+      .overlay {
+        visibility: visible;
+        opacity: 0.5;
+        transition: visibility 0s, opacity 0.3s linear;
+      }
+      .recipeLinkBox {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.5s linear;
+      }
+    }
+  }
+}

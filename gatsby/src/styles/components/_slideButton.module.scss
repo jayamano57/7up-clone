@@ -1,0 +1,23 @@
+.slideButton {
+  transition: all 200ms ease;
+  margin-top: 2.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--main-green);
+  border: 3px solid var(--main-green);
+  background: transparent;
+  text-transform: uppercase;
+  background: linear-gradient(to right, var(--main-green) 50%, transparent 50%);
+  background-size: 200%;
+  background-position: 100%;
+  &:hover {
+    color: var(--white);
+    background-position: 0;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}

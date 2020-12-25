@@ -1,0 +1,54 @@
+.sectionFooter {
+  height: 78.5rem;
+  @media (max-width: 767px) {
+    height: 45rem;
+  }
+  footer {
+    padding: 0 1.5rem 2.5rem;
+    background-image: url("../../media/footer-bg.webp");
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    @media (max-width: 767px) {
+      background-image: url("../../media/footer-bg-m.webp");
+    }
+    .navBox {
+      width: 100%;
+
+      padding: 1.5rem;
+      max-width: 106.8rem;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.75);
+      ul {
+        margin: 0 0 12px;
+        a {
+          padding: 0 1.8rem;
+          color: #636363;
+          text-decoration: none;
+          white-space: nowrap;
+        }
+        &.socials {
+          a {
+            font-size: 2.2rem;
+          }
+        }
+        &.resources {
+          display: flex;
+          flex-wrap: wrap;
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .credit {
+        margin-bottom: 1rem;
+      }
+      & > * {
+        color: #636363;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

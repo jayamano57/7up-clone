@@ -1,0 +1,7 @@
+@mixin header($color: var(--main-green), $fontSize: 8.4rem) {
+  color: $color;
+  font-size: $fontSize;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 700;
+}

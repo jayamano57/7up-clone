@@ -1,0 +1,67 @@
+.recipeSection {
+  height: 540px;
+  @media (max-width: 992px) {
+    height: 346px;
+  }
+  @media (max-width: 768px) {
+    height: 268px;
+  }
+  a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sectionName {
+    overflow: hidden;
+    position: relative;
+    // background-color: red;
+    font-size: 3.9rem;
+    padding: 2.7rem 2.9rem 2.6rem;
+    background-position: 200%;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      padding: 17px 18px 16px;
+    }
+    span {
+      //   transition: width 25s;
+      transition-delay: 0.5s;
+      //   width: 0;
+      //   /* overflow: hidden; */
+      //   display: inline-block;
+      //   overflow: hidden;
+      //   white-space: nowrap;
+      opacity: 0;
+    }
+    .overlay {
+      height: 100%;
+      width: 100%;
+      //   background-color: red;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: left 0.5s, opacity 0s;
+      transition-delay: 0.5s;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    .sectionName {
+      transform: scale(1.05);
+    }
+  }
+  .reveal {
+    background-position: 100%;
+    span {
+      opacity: 1;
+    }
+    .overlay {
+      opacity: 1;
+      left: 100%;
+      //   background-position: 200%;
+    }
+  }
+}

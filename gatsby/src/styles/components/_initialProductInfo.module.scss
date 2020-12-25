@@ -1,0 +1,30 @@
+@import "../mixins";
+// Initial
+.initialHeader {
+  @include header;
+  margin-bottom: 2.2rem;
+  color: var(--main-green);
+  @media (max-width: 512px) {
+    font-size: 6.4rem;
+  }
+}
+.initialSubHeader {
+  max-width: 50.3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--subHeader);
+  @media (max-width: 991px) {
+    max-width: 100%;
+    margin-bottom: 8rem;
+  }
+}
+.productGlass {
+  display: block;
+  margin-top: 8rem;
+  width: 100%;
+  max-width: 40rem;
+  @media (max-width: 991px) {
+    margin: auto;
+  }
+}

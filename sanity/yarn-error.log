@@ -1,0 +1,63 @@
+Arguments: 
+  /usr/local/Cellar/node/14.9.0/bin/node /usr/local/lib/node_modules/@sanity/cli/vendor/yarn install --json --non-interactive --ignore-engines --registry https://registry.npmjs.org
+
+PATH: 
+  /Users/jayamano57/Documents/Projects/7up-gatsby/sanity/node_modules/.bin:/Users/jayamano57/Documents/Projects/7up-gatsby/node_modules/.bin:/Users/jayamano57/Documents/Projects/node_modules/.bin:/Users/jayamano57/Documents/node_modules/.bin:/Users/jayamano57/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/usr/local/Cellar/node/14.9.0/bin:/usr/local/lib/node_modules/vendor:/anaconda3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/anaconda3/bin
+
+Yarn version: 
+  1.6.0
+
+Node version: 
+  14.9.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.npmjs.org/date-fns/-/date-fns-2.16.1.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (/usr/local/lib/node_modules/@sanity/cli/vendor/yarn:133816:19)
+      at Object.onceWrapper (events.js:420:28)
+      at ClientRequest.emit (events.js:314:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:769:9)
+      at Object.onceWrapper (events.js:420:28)
+      at TLSSocket.emit (events.js:326:22)
+      at TLSSocket.Socket._onTimeout (net.js:482:8)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7)
+
+npm manifest: 
+  {
+    "name": "7upgatsby",
+    "private": true,
+    "version": "1.0.0",
+    "description": "",
+    "main": "package.json",
+    "author": "jay amano <jayamano57@gmail.com>",
+    "license": "UNLICENSED",
+    "scripts": {
+      "start": "sanity start",
+      "test": "sanity check"
+    },
+    "keywords": [
+      "sanity"
+    ],
+    "dependencies": {
+      "@sanity/base": "^2.0.5",
+      "@sanity/components": "^2.0.5",
+      "@sanity/core": "^2.0.5",
+      "@sanity/default-layout": "^2.0.5",
+      "@sanity/default-login": "^2.0.5",
+      "@sanity/desk-tool": "^2.0.5",
+      "@sanity/vision": "^2.0.5",
+      "prop-types": "^15.6",
+      "react": "^16.2",
+      "react-dom": "^16.2"
+    },
+    "devDependencies": {}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
