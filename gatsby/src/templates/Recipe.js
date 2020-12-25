@@ -11,7 +11,9 @@ import ServingSize from "../media/serving-size.webp"
 import { graphql } from "gatsby"
 
 export default function Recipe({ data: { recipe }, pageContext }) {
-  const [over21, setOver21] = useState(sessionStorage.getItem("over21"))
+  const [over21, setOver21] = useState(
+    typeof window !== "undefined" && window.sessionStorage.getItem("over21")
+  )
   const [form, changeHandler] = useForm({ age: "" })
   function enterRecipe(e) {
     e.preventDefault()
