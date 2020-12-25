@@ -20,7 +20,9 @@ export default function Recipe({ data: { recipe }, pageContext }) {
     const year = date.getFullYear()
     const over21 = year - val >= 21
     if (over21) {
-      sessionStorage.setItem("over21", true)
+      // need this check for when gatsby builds, window is browser only feature
+      typeof window !== "undefined" &&
+        window.sessionStorage.setItem("over21", true)
       setOver21(true)
     } else {
       alert("Sorry, it doesn't look like you're old enough.")
