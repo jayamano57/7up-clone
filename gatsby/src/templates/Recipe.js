@@ -31,7 +31,8 @@ export default function Recipe({ data: { recipe }, pageContext }) {
       setOver21(false)
     }
   }
-  return over21 || over21 === "true" ? (
+  console.log(recipe, pageContext)
+  return over21 || over21 === "true" || recipe.recipe_type !== "Drink (21+)" ? (
     <div className={styles.recipePage}>
       <Img fluid={recipe.cover_image.asset.fluid} />
       <div className={styles.recipeContentContainer}>
